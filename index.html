@@ -24,30 +24,55 @@
       />
       <h1>90's Music Quiz App</h1>
     </div>
-    <div class="start">
-      <h2>How well do you know your 90's music?</h2>
-      <a href="#">Start Quiz!</a>
-    </div>
-    <div class="quiz">
-      <div class="questionscore">
-        <h6></h6>
-        <h5></h5>
+    <main aria-live="polite">
+      <div class="start">
+        <h2>How well do you know your 90's music?</h2>
+        <a href="#">Start Quiz!</a>
       </div>
-      <h2>Question Title</h2>
-      <ul>
-        <li>Choice</li>
-        <li>Choice</li>
-        <li>Choice</li>
-        <li>Choice</li>
-      </ul>
-      <a href="#">Submit Answer</a>
-    </div>
-    <div class="summary">
-      <h2>Summary</h2>
-      <p>Congrats you scored x</p>
-      <a href="#">Restart Quiz</a>
-    </div>
-    <script src="//code.jquery.com/jquery.min.js"></script>
+      <div class="quiz">
+        <div class="questionscore">
+          <h6>questions</h6>
+          <h5>score</h5>
+        </div>
+        <form id="questionform">
+          <fieldset>
+            <legend>Question Title</legend>
+            <ul>
+              <li>
+                <input type="radio" value="0" name="answers" id="answer0" />
+                <label for="answer0" id="label0">Choice 1</label>
+              </li>
+              <li>
+                <input type="radio" value="1" name="answers" id="answer1" />
+                <label for="answer1" id="label1">Choice 2 </label>
+              </li>
+              <li>
+                <input type="radio" value="2" name="answers" id="answer2" />
+                <label for="answer2" id="label2">Choice 3 </label>
+              </li>
+              <li>
+                <input type="radio" value="3" name="answers" id="answer3" />
+                <label for="answer3" id="label3">Choice 4 </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button>Submit Answer</button>
+        </form>
+      </div>
+      <div class="feedback">
+        <h2 id="feedbacktext">You guessed correctly!</h2>
+        <button id="nextquestion">Next Question</button>
+      </div>
+      <div class="summary">
+        <h2>Summary</h2>
+        <p>Congrats you scored x</p>
+        <a href="#">Restart Quiz</a>
+      </div>
+    </main>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery.min.js"
+    ></script>
     <script type="text/javascript" src="index.js"></script>
   </body>
 </html>
