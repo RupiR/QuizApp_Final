@@ -44,6 +44,11 @@ a {
   display: inline-block;
 }
 
+a:hover {
+  background-color: #ccccff;
+  color: #3d3d3d;
+}
+
 button:hover {
   background-color: #ccccff;
   color: #3d3d3d;
